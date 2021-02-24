@@ -21,21 +21,20 @@ Feature: Login to the demo site
   I want to use this template for my feature file
 
 
-  Scenario: Add user and Login
-    Given I can access thedemosite.com
+  Scenario Outline: Add user and Login
+    Given I can access "<domain>"
     When I go to the add user page
-    And Enter my user credentials
+    And Enter my user credentials "<username>" "<password>"
     When I navigate to the login page
-    And I enter my credentials
+    And I enter my login credentials "<username>" "<password>"
     Then I should have successfully logged in
 
-  #@tag2
-  #Scenario Outline: Title of your scenario outline
-    #Given I want to write a step with <name>
-    #When I check for the <value> in step
-    #Then I verify the <status> in step
 
-    #Examples: 
-      #| name  | value | status  |
-      #| name1 |     5 | success |
-      #| name2 |     7 | Fail    |
+    Examples: 
+      | username  | password |				domain				|
+      | guest 		|    guest |	thedemosite.co.uk/	|
+      | root 			|     root |	thedemosite.co.uk/	|
+      | Brian 		|    bread |	thedemosite.co.uk/	|
+      | Lumin 		|    scott |	thedemosite.co.uk/	|
+      | Kolbas 		|  sausage |	thedemosite.co.uk/	|
+
