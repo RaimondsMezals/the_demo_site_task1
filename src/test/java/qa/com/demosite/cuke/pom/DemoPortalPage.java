@@ -1,4 +1,4 @@
-package qa.com.demosite.pom.demosite;
+package qa.com.demosite.cuke.pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

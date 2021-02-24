@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import qa.com.demosite.pom.demosite.DemoPortalPage;
+import qa.com.demosite.cuke.pom.DemoPortalPage;
 import qa.com.demosite.pom.demosite.pages.AddUserPage;
 import qa.com.demosite.pom.demosite.pages.LoginUserPage;
 
@@ -80,7 +80,6 @@ public class TheDemoSiteTest {
 
 		System.out.println("test1 running");
 
-		Thread.sleep(5000);
 	}
 
 	public static ChromeOptions chromeCfg() {
